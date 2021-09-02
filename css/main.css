@@ -1,7 +1,15 @@
 body {
   font-size: 16px;
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   text-align: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .hide {
@@ -11,12 +19,44 @@ body {
 h1 {
   padding: 0.5em;
   font-size: 2.5em;
-  font-family: "Julius Sans One", sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+h3 {
+  color: #616161;
+  margin: 175px 0 5px;
+  font-size: 25px;
+}
+
+.description {
+  padding: 0 10%;
+  margin-bottom: 10px;
+}
+
+.handle {
+  color: #757575;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.sub-heading {
+  font-size: 18px;
+  color: #757575;
+}
+
+.bio {
+  margin-top: 5px;
+  padding: 0 5px;
 }
 
 img {
   border-radius: 50%;
-  border: 3px solid steelblue;
+  border: 8px solid #fff;
+  width: 120px;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
 }
 
 .random-peeps {
@@ -26,15 +66,29 @@ img {
 }
 
 .random-peeps div {
+  color: rgb(0, 54, 16);
   flex-basis: 250px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 0.5em;
-  border: 1px solid steelblue;
-  background-color: #c6f6f6;
+  border: 1px solid rgb(0, 105, 32);
+  border-radius: 10px;
+  height: 350px;
+  background-image: url('https://images.unsplash.com/photo-1630522521760-7773e7d1d47f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-size: 100%;
+  background-position: left -30%;
+  background-repeat: no-repeat;
   margin: 1em;
-  -webkit-box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.377);
-  box-shadow: 5px 5px 18px 5px rgba(0, 0, 0, 0.377);
+  -webkit-box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transition: all 0.2s;
 }
+
+.random-peeps div:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
 .num-users label {
   font-size: 1.25em;
 }
@@ -45,5 +99,23 @@ img {
   color: steelblue;
   font-weight: bold;
   font-size: 1em;
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+footer {
+  margin: 15px;
+}
+
+.ww-link {
+  transition: all 0.2s;
+}
+.ww-link:link,
+.ww-link:visited {
+  color: rgb(0, 54, 16);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.ww-link:hover {
+  color: #616161;
 }
