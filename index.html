@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/script.js" defer></script>
   </head>
@@ -13,6 +16,10 @@
   <body>
     <div class="main">
       <h1>Random User Generator!</h1>
+      <p class="description">
+        NOTE: This small project uses DOM manipulation and API fetch data to
+        create user cards for generated users.
+      </p>
       <div class="num-users hide">
         <label for="users">How many users would you like?</label>
         <select name="users" id="users">
@@ -23,5 +30,16 @@
       </div>
       <div class="random-peeps"></div>
     </div>
+    <footer>
+      <p class="credit">
+        Designed and coded by
+        <a
+          target="_blank"
+          class="ww-link"
+          href="https://www.williewhitfield.com"
+          >Willie Whitfield</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
