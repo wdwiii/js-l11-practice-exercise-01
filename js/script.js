@@ -1,4 +1,6 @@
-//Contian
+const selectUserNumber = document.querySelector('#users');
+
+//User Cards Container
 const randomFolks = document.querySelector('.random-peeps');
 
 //Object that contains custom user details
@@ -47,8 +49,11 @@ const addInterests = function (interest1, interest2) {
 //1. fetch API data from randomuser.me
 //2. create userResults variable to covert fetched data to JSON
 //3. call displayUsers function using userResults as a parameter
-const getData = async function () {
-  const usersRequest = await fetch('https://randomuser.me/api?results=4');
+//4. Functon uses numUsers as a param to determain how many user cards to display.
+const getData = async function (numUsers) {
+  const usersRequest = await fetch(
+    `https://randomuser.me/api?results=${numUsers}`
+  );
   const data = await usersRequest.json();
   const userResults = data.results;
   console.log(userResults);
@@ -93,4 +98,14 @@ const displayUsers = function (userResults) {
   });
 };
 
-getData();
+//Function Notes
+//1. Add change event for the select element (#users)
+//2. Reassign the numUsers value to the value of the select element's target.
+//3. Call the getData function with a param of numUsers
+selectUserNumber.addEventListener('change', function (e) {
+  numUsers = e.target.value;
+  getData(numUsers);
+});
+
+//1 is the default falue for number of user cards to display
+getData(1);
