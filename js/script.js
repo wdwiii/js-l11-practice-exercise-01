@@ -6,24 +6,40 @@ const randomFolks = document.querySelector('.random-peeps');
 //Object that contains custom user details
 const profileDetails = {
   interests1: [
-    'Cooking',
-    'Gaming',
+    'Cooking 🍳',
+    'Gaming 🕹',
     'Basketball 🏀',
     'Swimming 🏊🏽',
-    'Reading horror novels',
-    'Birdwatching',
-    'Freestyling',
-    'World of Warcraft',
+    'Reading horror novels 📖',
+    'Birdwatching 🦜',
+    'Freestyling 🎤',
+    'World of Warcraft 🧝‍♀️',
+    'Surfing 🏄',
+    'Tacos 🌮',
+    'Good novels 📕📗📘📙',
+    'Champange 🍾',
+    'Alphabet singing 🔤',
+    '3D printing 🖨',
+    'Hot dog eating contests 🌭🌭🌭',
+    'Adult coloring books 🖍',
   ],
   interests2: [
-    'Line Dancing',
-    'Poker',
-    'Coding',
-    'Dog Training',
-    'Knitting',
-    'Hanging with friends',
-    'Chess',
-    'Apple picking',
+    'line Dancing 🕺',
+    'poker 🂡',
+    'coding 👩🏾‍💻',
+    'dog training 🐕',
+    'knitting 🧶',
+    'hanging with friends 🎉',
+    'chess ♖',
+    'apple picking 🍏🍎',
+    'turtle racing 🐢🏎',
+    'selfies 🤳🏽',
+    'red wine 🍷',
+    'motivational speaking 🗣',
+    'long walks 🚶🏻‍♀️',
+    'wig making 👩🏼‍🎤',
+    'flossing until my gums bleed 🤭',
+    "things I can't say until the case is closed 🕵🏻🤐",
   ],
   lookingFor: [
     'a relationship',
@@ -35,6 +51,18 @@ const profileDetails = {
     'something serious',
     'eggplants and peaches',
     'a coding partner',
+    'a study group',
+    'tech support',
+    'an accountibila-buddy',
+    'the party',
+    'cool vibes',
+    'a math tutor',
+    'a bible study group',
+    '... I dont really know',
+    'YOU',
+    'dog lovers',
+    'the best hamburger in town',
+    'a new direction',
   ],
 };
 
@@ -84,6 +112,7 @@ const displayUsers = function (userResults) {
       profileDetails.interests1
     )} and ${randomIndex(profileDetails.interests2)}`;
     let userLookingFor = randomIndex(profileDetails.lookingFor);
+    let banner = document.querySelector('.banner');
 
     let classes = [
       'tropical',
@@ -99,11 +128,20 @@ const displayUsers = function (userResults) {
       'bug',
       'car',
       'starfish',
+      'waffle-cones',
+      'driver',
+      'trees',
+      'home-office',
+      'bonfire',
+      'green',
+      'fog',
     ];
 
     const userDiv = document.createElement('div');
+    userDiv.classList.add('user-card');
 
     userDiv.innerHTML = `
+    <div class="banner ${randomIndex(classes)}"></div>
     <img src=${imageUrl} alt="User avatar" />
     <h3>${name}</h3>
     <figure class="sub-heading">
@@ -112,7 +150,7 @@ const displayUsers = function (userResults) {
       <p class="bio">${userInterest}. I am just looking for ${userLookingFor}.</p>
     </figure>
     `;
-    userDiv.classList.add(`${randomIndex(classes)}`);
+
     randomFolks.append(userDiv);
   });
 };
