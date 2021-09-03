@@ -70,18 +70,36 @@ const getData = async function (numUsers) {
 const displayUsers = function (userResults) {
   randomFolks.innerHTML = '';
   userResults.forEach(function (user) {
-    let randomIndex = Math.floor(
-      Math.random() * profileDetails.interests1.length
-    );
+    //Function Notes
+    //1. Return the arrry[i], where I is a random number between 0 and the (array.length - 1)
+    const randomIndex = function (array) {
+      return array[Math.floor(Math.random() * array.length)];
+    };
 
     let country = user.location.country;
     let name = `${user.name.first} ${user.name.last}`;
     let imageUrl = user.picture.large;
     let handle = `@${user.name.first}${user.name.last}`;
-    let userInterest = `${profileDetails.interests1[randomIndex]} and ${profileDetails.interests2[randomIndex]}`;
-    let userLookingFor = profileDetails.lookingFor[randomIndex];
+    let userInterest = `${randomIndex(
+      profileDetails.interests1
+    )} and ${randomIndex(profileDetails.interests2)}`;
+    let userLookingFor = randomIndex(profileDetails.lookingFor);
 
-    console.log(randomIndex);
+    let classes = [
+      'tropical',
+      'living-space',
+      'mirror',
+      'hotel',
+      'computer',
+      'jimmy-dean',
+      'church',
+      'mountain',
+      'dog',
+      'truck',
+      'bug',
+      'car',
+      'starfish',
+    ];
 
     const userDiv = document.createElement('div');
 
@@ -94,6 +112,7 @@ const displayUsers = function (userResults) {
       <p class="bio">${userInterest}. I am just looking for ${userLookingFor}.</p>
     </figure>
     `;
+    userDiv.classList.add(`${randomIndex(classes)}`);
     randomFolks.append(userDiv);
   });
 };
