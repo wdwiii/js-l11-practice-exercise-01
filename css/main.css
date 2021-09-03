@@ -47,7 +47,7 @@ h3 {
 
 .bio {
   margin-top: 5px;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 img {
@@ -68,7 +68,7 @@ img {
 
 .user-card {
   color: rgb(0, 54, 16);
-  flex-basis: 250px;
+  flex-basis: 265px;
   display: flex;
   flex-direction: column;
   text-align: center;
