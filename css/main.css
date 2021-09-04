@@ -209,3 +209,11 @@ footer {
 .fog {
   background-image: url('https://images.unsplash.com/photo-1630258734586-bb83c3210222?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MjB8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60');
 }
+
+.galaxy {
+  background-image: url('https://images.unsplash.com/photo-1630692590101-c907a9efc124?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=60');
+}
+
+.steering-wheel {
+  background-image: url('https://images.unsplash.com/photo-1630683744364-0b49bd336033?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60');
+}

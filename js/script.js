@@ -135,6 +135,8 @@ const displayUsers = function (userResults) {
       'bonfire',
       'green',
       'fog',
+      'galaxy',
+      'steering-wheel',
     ];
 
     const userDiv = document.createElement('div');
